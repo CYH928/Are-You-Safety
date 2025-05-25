@@ -2,7 +2,7 @@
     font-family: 'Inter', sans-serif;
 }
 body {
-    background: #fbfbfd;
+    background: #f5f5f7;
     overflow-x: hidden;
     min-width: 320px;
     position: relative;
@@ -16,31 +16,37 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* window */
 .window {
-    width: calc(90% - 56px);
+    width: calc(90% - 64px);
     max-width: 480px;
     height: auto;
-    background: #f5f5f7;
-    padding: 24px 28px;
-    border-radius: 23px
+    background: #fff;
+    padding: 24px 32px;
+    border-radius: 23px;
+    transition: .5s;
 }
-.window .headline {
+.headline {
     color: #1d1d1f;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 600;
-    margin: 0 0 16px;
+    margin: 0;
 }
-.window div.input-group {
+/* input */
+div.input-group {
     display: flex;
     flex-direction: column;
+    margin-top: 24px;
 }
-.window div.input-group label {
+div.input-group label {
     color: #515154;
-    font-size: 14px;
+    width: fit-content;
+    font-size: 15px;
     font-weight: 400;
     margin-bottom: 4px;
 }
-.window div.input-group input {
+div.input-group input {
     color: #1d1d1f;
     font-size: 17px;
     font-weight: 400;
@@ -48,80 +54,52 @@ body {
     border: 1px solid #d2d2d7;
     border-radius: 6px;
 }
-.window div.input-group input:focus {
+div.input-group input:focus {
     outline: 2px solid #0071e3;
 }
 
-
-
-#strength-feedback {
-    margin-bottom: 20px;
+/* password strength */
+#strength {
+    margin-top: 16px
 }
-
-#strength-bar-container {
+#strength #bar {
+    background-color: #d2d2d7;
     width: 100%;
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    height: 20px;
-    margin-bottom: 10px;
+    height: 8px;
+    border-radius: 6px;
 }
-
-#strength-bar {
+#strength #bar-progress {
+    width: 0%;
     height: 100%;
-    width: 0%; /* Initial width */
-    border-radius: 4px;
+    border-radius: inherit;
     transition: width 0.3s ease, background-color 0.3s ease;
 }
-
-/* Strength levels styling */
-.weak #strength-bar {
-    background-color: #ff4d4d; /* Red */
-    width: 33%;
-}
-.weak #strength-text {
-    color: #ff4d4d;
+#strength #text {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 12px 0 0;
 }
 
-.medium #strength-bar {
-    background-color: #ffcc00; /* Orange */
-    width: 66%;
-}
-.medium #strength-text {
-    color: #ffcc00;
-}
-
-.strong #strength-bar {
-    background-color: #4caf50; /* Green */
-    width: 100%;
-}
-.strong #strength-text {
-    color: #4caf50;
-}
-
-#strength-text {
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
+/* suggest */
 #suggestions {
-    text-align: left;
+    padding-top: 24px;
+    border-top: 1px solid #d2d2d7;
     margin-top: 20px;
-    color: #333;
 }
-
-#suggestions h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #444;
+#suggestions h3 {
+    color: #424245;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
 }
-
 #suggestion-list {
-    list-style-type: disc;
+    color: #515154;
+    list-style-type: disclosure-closed;
     padding-left: 20px;
-    font-size: 0.9em;
-    color: #555;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 16px 0 0;
 }
-
 #suggestion-list li {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }

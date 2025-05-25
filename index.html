@@ -17,19 +17,19 @@
     <body>
         <div class="container">
             <section class="window">
-                <h1 class="headline">Password is Safety?</h1>
+                <h1 class="headline">Your Password is Safety?</h1>
                 <div class="input-group">
                     <label for="password">Enter your password:</label>
-                    <input type="password" id="password" name="password" oninput="checkPasswordStrength()">
+                    <input type="password" id="password" oninput="checkPasswordStrength()">
                 </div>
-                <div id="strength-feedback">
-                    <div id="strength-bar-container">
-                        <div id="strength-bar"></div>
+                <div id="strength">
+                    <div id="bar">
+                        <div id="bar-progress"></div>
                     </div>
-                    <p id="strength-text"></p>
+                    <p id="text"></p>
                 </div>
                 <div id="suggestions">
-                    <h3>Suggestions to improve your password:</h3>
+                    <h3>Suggestions to improve:</h3>
                     <ul id="suggestion-list"></ul>
                 </div>
             </section>
